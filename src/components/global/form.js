@@ -8,7 +8,7 @@ const ContactForm =({stat, setStat})=>{
       <input type="text" name="subject" required placeholder="Subject"/>
       <textarea name="message" required placeholder="Message"></textarea>
       <input type="hidden" name="_captcha" value="false"/>
-      {/*       <input type="hidden" name="_next" value="https://yourdomain.co/thanks.html"></input>   put your own email send confirmation page link here*/}
+      {/*<input type="hidden" name="_next" value="https://yourdomain.co/thanks.html"></input>.....if you want to put your own email-sent confirmation page link here*/}
       <button type="submit" className="button">Send</button>
     </form>
   )

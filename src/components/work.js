@@ -47,31 +47,31 @@ const Work =({stat, setStat})=>{
       <main className="projectList">
         <PiCard 
           hover={()=>{handleVeil(A, B, C, D, E, F, G, h, i); setA("active");}} link=""
-          claz={`project ${A}`} imgsrc="../media/projects/3iftee.png" imgalt="profile image" headText="thriftee" paragraph="some text about the project"/>
+          claz={`project ${A}`} imgsrc="../media/projects/3iftee.png" imgalt="profile image" headText="thriftee" paragraph="An online clothing store for Thrift wears"/>
         <PiCard 
           hover={()=>{handleVeil(A, B, C, D, E, F, G, h, i); setB("active");}} link="https://big-bite-self.vercel.app"
-          claz={`project ${B}`} imgsrc="../media/projects/bigbite.png" imgalt="profile image" headText="Bigbite" paragraph="some text about the project"/>
+          claz={`project ${B}`} imgsrc="../media/projects/bigbite.png" imgalt="profile image" headText="Bigbite" paragraph="A local-based Snack shop landing page"/>
         <PiCard 
           hover={()=>{handleVeil(A, B, C, D, E, F, G, h, i); setC("active");}} link="https://code-i.vercel.app"
-          claz={`project ${C}`} imgsrc="../media/projects/codei.png" imgalt="profile image" headText="Codei" paragraph="some text about the project"/>
+          claz={`project ${C}`} imgsrc="../media/projects/codei.png" imgalt="profile image" headText="Codei" paragraph="A Web design, development and code optimization company's website"/>
         <PiCard
           hover={()=>{handleVeil(A, B, C, D, E, F, G, h, i); setD("active");}} link=""
-          claz={`project ${D}`} imgsrc="../media/projects/foodlens.png" imgalt="profile image" headText="Foodlens" paragraph="some text about the project"/>
+          claz={`project ${D}`} imgsrc="../media/projects/foodlens.png" imgalt="profile image" headText="Foodlens" paragraph="Food Analysis website with limited nutritional information"/>
         <PiCard
           hover={()=>{handleVeil(A, B, C, D, E, F, G, h, i); setE("active");}} link="https://candela-tawny.vercel.app"
-          claz={`project ${E}`} imgsrc="../media/projects/candela.png" imgalt="profile image" headText="Candela" paragraph="some text about the project"/>
+          claz={`project ${E}`} imgsrc="../media/projects/candela.png" imgalt="profile image" headText="Candela" paragraph="A start-up construction company's website"/>
         <PiCard
           hover={()=>{handleVeil(A, B, C, D, E, F, G, h, i); setF("active");}} link="https://kiqx.vercel.app"
-          claz={`project ${F}`} imgsrc="../media/projects/kiqx.png" imgalt="profile image" headText="Kiqx" paragraph="some text about the project"/>
+          claz={`project ${F}`} imgsrc="../media/projects/kiqx.png" imgalt="profile image" headText="Kiqx" paragraph="Product list page for an online Footwear store"/>
         <PiCard
           hover={()=>{handleVeil(A, B, C, D, E, F, G, h, i); setG("active");}} link="https://pixel-mind-sable.vercel.app"
-          claz={`project ${G}`} imgsrc="../media/projects/pixelmind.png" imgalt="profile image" headText="Pixelmind" paragraph="some text about the project"/>
+          claz={`project ${G}`} imgsrc="../media/projects/pixelmind.png" imgalt="profile image" headText="Pixelmind" paragraph="An AI image-generation website's landing page"/>
         <PiCard
           hover={()=>{handleVeil(A, B, C, D, E, F, G, h, i); setH("active");}} link="https://tuneflix-ruby.vercel.app"
-          claz={`project ${h}`} imgsrc="../media/projects/tuneflix.png" imgalt="profile image" headText="Tuneflix" paragraph="some text about the project"/>
+          claz={`project ${h}`} imgsrc="../media/projects/tuneflix.png" imgalt="profile image" headText="Tuneflix" paragraph="A Media streaming web-app (music and videos)"/>
         <PiCard
           hover={()=>{handleVeil(A, B, C, D, E, F, G, h, i); setI("active");}} link="https://walls-neon.vercel.app"
-          claz={`project ${i}`} imgsrc="../media/projects/walls.png" imgalt="profile image" headText="Walls" paragraph="some text about the project"/>
+          claz={`project ${i}`} imgsrc="../media/projects/walls.png" imgalt="profile image" headText="Walls" paragraph="A Wallpaper website"/>
       </main>
       <ContactForm stat={stat} setStat={setStat}/>
     </aside>
