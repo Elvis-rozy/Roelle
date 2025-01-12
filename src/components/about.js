@@ -4,17 +4,20 @@ const About =()=>{
       <img src="../media/icons/gmail.png" alt=""/>
       <div>
         <div className="text">
-          <h2>01</h2>
+          <h2>HI</h2>
           <span>
-            <h4>Frontend Developer</h4>
-            <p>more details</p>
+            <h4>I'm Elvis</h4>
+            <p>A passionate frontend developer with 2 years of experience and love for crafting 
+              responsive, accessible, and visually stunning web applications.</p>
           </span>
         </div>
         <div className="text">
           <h2>02</h2>
           <span>
-            <h4>Certifications</h4>
-            <p>more details</p>
+            <h4>My Expertise</h4>
+            <ul>
+              <li></li>
+            </ul>
           </span>
         </div>
       </div>

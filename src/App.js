@@ -1,9 +1,12 @@
+import { useState } from "react";
 import About from "./components/about";
 import Contact from "./components/contact";
 import Work from "./components/work";
+
 import "./sass/style.scss";
 
-function App() {
+function App() {  
+  const [stat, setStat] = useState("hidden");
 
   var shadow = "";
   for(var i = 0; i < 10; i++){
@@ -14,11 +17,11 @@ function App() {
     <main className="home">
       <About/>
       <section>
-        <h1 data-text="Elvis" style={{textShadow: shadow}}>Elvis</h1>
+        <h1 data-text="roelle" style={{textShadow: shadow}}>roelle</h1>
         <img className="hero" src="./media/hero.png" alt=""/>
-        <Contact/>
+        <Contact setStat={setStat}/>
       </section>
-      <Work/>
+      <Work stat={stat} setStat={setStat}/>
     </main>
   );
 }

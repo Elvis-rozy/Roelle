@@ -1,6 +1,8 @@
 import PiCard from "./piCard";
+import ContactForm from "./global/form";
 import { useState } from "react";
-const Work = () =>{
+
+const Work =({stat, setStat})=>{
   /*
   const [projects, setProjects] = useState([
     {id: "01", num: 1, name: "3iftee", desc1: "bla bla bla", desc2: "bla bla bla", collab1: "img", collab2: "img", previewImg: "../media/projects/3iftee.png"},
@@ -18,20 +20,17 @@ const Work = () =>{
   const [activeItemId, setActiveItemId] = useState('active');
   const [bi, setBi] = useState('active');
   const handleMouseOver = (itemId) => {
-    setActiveItemId(itemId);
-    setBi('inactive');
+    setActiveItemId(itemId); setBi('inactive');
   }
   */
 
-  const [A, setA] = useState("active"), [B, setB] = useState("inactive"), [C, setC] = useState("inactive");
-  const [D, setD] = useState("inactive"), [E, setE] = useState("inactive"), [F, setF] = useState("inactive");
-  const [G, setG] = useState("inactive"), [h, setH] = useState("inactive"), [i, setI] = useState("inactive");
+  const [A, setA] = useState("active"), [B, setB] = useState("inactive"), [C, setC] = useState("inactive"), [D, setD] = useState("inactive"), [E, setE] = useState("inactive"), [F, setF] = useState("inactive"), [G, setG] = useState("inactive"), [h, setH] = useState("inactive"), [i, setI] = useState("inactive");
 
   const handleVeil=(a, b, c, d, e, f, g, h, i)=>{
     if (a||b||c||d||e||f||g|h|i=== "active"){
-      setA("inactive"); setB("inactive"); setC("inactive"); setD("inactive");
-      setE("inactive"); setF("inactive"); setG("inactive"); setH("inactive");
-      setI("inactive");
+      setA("inactive"); setB("inactive"); setC("inactive");
+      setD("inactive"); setE("inactive"); setF("inactive"); 
+      setG("inactive"); setH("inactive"); setI("inactive");
     }
   }
 
@@ -42,7 +41,7 @@ const Work = () =>{
       {projects.map((project)=>{
         return (
           <PiCard key={project.id} title={project.name} paragraph={project.desc1} hover={()=> handleMouseOver(project)} a={bi} claz={`project ${activeItemId === project? 'active' : ''}`}
-          handleClick={()=>{setClicked(1);}} imgsrc={project.previewImg} imgalt="profile image" headText={project.name}/>
+          imgsrc={project.previewImg} imgalt="profile image" headText={project.name}/>
         )
       })}*/}
       <main className="projectList">
@@ -74,6 +73,7 @@ const Work = () =>{
           hover={()=>{handleVeil(A, B, C, D, E, F, G, h, i); setI("active");}} link="https://walls-neon.vercel.app"
           claz={`project ${i}`} imgsrc="../media/projects/walls.png" imgalt="profile image" headText="Walls" paragraph="some text about the project"/>
       </main>
+      <ContactForm stat={stat} setStat={setStat}/>
     </aside>
   )
 }

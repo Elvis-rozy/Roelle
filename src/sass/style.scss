@@ -36,7 +36,7 @@
     justify-content: space-between;
     top: 5dvh;
     left: 5dvh;
-    width: 50dvw;
+    width: 60dvw;
     height: 12dvh;
     display: flex;
     
@@ -55,7 +55,7 @@
       width: 100%;
       position: relative;
       display: flex;
-      gap: 2dvh;
+      gap: 2.5dvh;
       
       &:nth-child(1) {
 
@@ -78,6 +78,7 @@
       span {
         h4 {
           font-size: 1.8dvh;
+          margin-bottom: 1dvh;
         }
         p {
           font-size: 1.6dvh;
@@ -93,7 +94,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    bottom: 10dvh;
+    bottom: 6dvh;
     background: #e1e1e1;
     box-shadow: 12px 8px 8px 0px rgb(0 0 0 / 51%);
     
@@ -134,24 +135,25 @@
     }
 
     .contactIcons {
-      height: 32dvh;
+      height: 18dvh;
+      bottom: 5dvh;
       display: flex;
       position: absolute;
       flex-direction: column;
       justify-content: space-between;
       overflow: hidden;
-      right: 3dvh;
+      right: 5dvh;
       width: 15dvh;
 
-      a {
+      a, span {
         display: flex;
         gap: 1dvh;
-        //width: 8dvw;
         position: relative;
         right: -10dvh;
         align-items: center;
         transition: .3s;
         justify-content: space-between;
+        cursor: pointer;
 
         &:hover {
           right: 0;
@@ -177,6 +179,7 @@
     display: flex;
     gap: 2dvh;
     flex-direction: column;
+    justify-content: center;
     width: 40dvw;
     z-index: 2;
     height: 100%;
@@ -246,7 +249,78 @@
       p {
         font-size: 1.6dvh;
       }
-    }    
+    }
+
+    .form {
+      display: flex;
+      align-self: center;
+      flex-direction: column;
+      position: absolute;
+      transition: .5s;
+      gap: 2dvh;
+      width: 80%;
+      height: 50%;
+
+      &::after {
+        position: absolute;
+        width: 140%;
+        left: -20%;
+        top: -42%;
+        height: 100dvh;
+        z-index: -1;
+        backdrop-filter: blur(5px);
+      }
+
+      .cancelBtn {
+        width: 6dvh;
+        position: absolute;
+        top: -25%;
+        left: -10%;
+        cursor: pointer;
+        background: #0000003d;
+        padding: 1.5dvh;
+        border-radius: 50%;
+        transition: .3s;
+        
+        &:hover {
+          box-shadow: inset 0px 3px 9px #000000ad;
+          background: #41574ba1;
+          transform: scale(.97);
+        }
+      }
+
+      input, textarea {
+        outline: none;
+        padding: 1dvh 2dvh;
+        transition: .3s;
+        box-shadow: 3px 5px 5px 0px rgb(33 33 33 / 53%);
+
+        &:focus {
+          transform: scale(0.98);
+          box-shadow: none;
+        }
+      }
+
+      textarea {
+        height: -webkit-fill-available;
+      }
+
+      .button {
+        display: flex;
+        height: 12dvh;
+        background: black;
+        width: 100%;
+        color: white;
+        align-items: center;
+        justify-content: center;
+        transition: .3s;
+        
+        &:hover {
+          background: #4a6254;
+          transform: scale(0.98);
+        }
+      }
+    }
   }
 }
 
@@ -269,5 +343,25 @@
   img, h3, p {
     transition: .3s;
     opacity: 0;
+  }
+}
+
+.hidden {
+  opacity: 0;
+  z-index: -1;
+  
+  &::after {
+    content: none;
+    opacity: 0;
+  }
+}
+
+.visible {
+  z-index: 2;
+  opacity: 1;
+  
+  &::after {
+    opacity: 1;
+    content: "";
   }
 }

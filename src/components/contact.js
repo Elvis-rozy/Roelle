@@ -1,10 +1,10 @@
-const Contact =()=>{
+const Contact =({setStat})=>{
+
   return (
     <div className="contactIcons">
-      <a href="/"><img src="../media/icons/github.png" alt=""/><p>Github</p></a>
-      <a href="/"><img src="../media/icons/gmail.png" alt=""/><p>gmail</p></a>
-      <a href="/"><img src="../media/icons/linkedin.png" alt=""/><p>linkedin</p></a>
-      <a href="/"><img src="../media/icons/whatsapp.png" alt=""/><p>whatsapp</p></a>
+      <a href="https://github.com/Elvis-rozy"><img src="../media/icons/github.png" alt=""/><p>Github</p></a>
+      <span onClick={()=>{setStat("visible")}}><img src="../media/icons/gmail.png" alt=""/><p>gmail</p></span>
+      <a href="https://www.linkedin.com/in/elvis-oguoma"><img src="../media/icons/linkedin.png" alt=""/><p>linkedin</p></a>
     </div>
   )
 }
