@@ -2,26 +2,21 @@ import { useState } from "react";
 import About from "./components/about";
 import Contact from "./components/contact";
 import Work from "./components/work";
-
 import "./sass/style.scss";
+import {heroImg} from './components/objects.js'
 
 function App() {  
-  const [stat, setStat] = useState("hidden");
-
-  var shadow = "";
-  for(var i = 0; i < 10; i++){
-    shadow+=(shadow ? "," : " ")+ i*1+"px " + i*1+"px 0 #bfbfbf";
-  }
+  const [contactStat, setContactStat] = useState("hidden");
+  const [workStat, setWorkStat] = useState("hidden");
 
   return (
     <main className="home">
       <About/>
       <section>
-        <h1 data-text="roelle" style={{textShadow: shadow}}>roelle</h1>
-        <img className="hero" src="./media/hero.png" alt=""/>
-        <Contact setStat={setStat}/>
+        <div className="heroContainer">{heroImg.map((hero)=>(<img key={hero} className="hero" src={hero} alt=""/>))}</div>
+        <Contact setStat={setContactStat}/>
       </section>
-      <Work stat={stat} setStat={setStat}/>
+      <Work workStat={workStat} setWorkStat={setWorkStat} stat={contactStat} setStat={setContactStat}/>
     </main>
   );
 }

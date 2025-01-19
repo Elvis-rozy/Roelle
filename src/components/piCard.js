@@ -1,12 +1,12 @@
-const PiCard=({link, claz, hover, imgsrc, imgalt, headText, paragraph})=>{
+const PiCard=({claz, a, hover, click, imgsrc, imgalt, headText, paragraph})=>{
   return(
-    <a href={link} className={claz} onMouseEnter={hover}>
+    <div className={`${claz} ${a}`} onMouseEnter={hover} onClick={click}>
       <img src={imgsrc} alt={imgalt}/>
       <div className="textBOX">
         <h3>{headText}</h3>
         <p>{paragraph}</p>
       </div>
-    </a>
+    </div>
   )
 }
 export default PiCard;

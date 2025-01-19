@@ -7,7 +7,7 @@
   list-style: none;
   scroll-behavior: smooth;
   font-family:  "techFont", sans-serif;
-  color: black;
+  color: #9f9f9e;
 }
 
 @import "animations";
@@ -21,17 +21,63 @@
   src: url("../font/Digital Cards Demo.ttf");
 }
 
+.button {
+  display: flex;
+  background: linear-gradient(45deg, black, #a392377a);
+  color: white;
+  align-items: center;
+  justify-content: center;
+  transition: .3s;
+  
+  &:hover {
+    background: black;
+    color: #a39237;
+    transform: scale(0.98);
+  }
+}
+
+.cancelBtn {
+  position: absolute;
+  cursor: pointer;
+  background: #000000;
+  padding: 1.5dvh;
+  transition: .3s;
+  
+  &:hover {
+    background: linear-gradient(45deg, black, #a39237);
+    transform: scale(.97);
+  }
+}
+
 .home {
   position: relative;
   padding: 2dvh;
   overflow: hidden;
   display: flex;
-  background: #add8e666;
+  background: #0e0e0e;
+  background: #27282b;
 
   .about {
     justify-content: space-between;
     pointer-events: none;
     display: flex;
+    z-index: 3;
+
+    h1 {
+      position: absolute;
+      pointer-events: none;
+      color: #a39237;
+      font-family: dcd;
+      transform: rotate(-90deg);
+
+      &::before {
+        content: "";
+        position: absolute;
+        background: rgb(163, 146, 55);
+        height: .2dvh;
+        z-index: 2;
+      }
+    }
         
     div {
       display: flex;
@@ -41,18 +87,9 @@
       position: relative;
       display: flex;
       width: 100%;
-      
-      &:nth-child(1) {
-
-        &::before {
-          content: "";
-          position: absolute;
-          background: #3c474178;
-          width: .3dvh;
-          left: -3dvh;
-          top: 1dvh;
-          z-index: 2;
-        }
+    
+      h2, span h4 {
+        color: #a39237;
       }
 
       span {
@@ -68,49 +105,37 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    background: #e1e1e1;
-    box-shadow: 12px 8px 8px 0px rgb(0 0 0 / 51%);
-    
-    &::before {
-      position: absolute;
-      background: #e1e1e1;
-      width: 5dvh;
+
+    .heroContainer {
+      width: 100%;
       height: 100%;
-      right: -5dvh;
-    }
+      display: flex;
 
-    h1 {
-      position: absolute;
-      pointer-events: none;
-      color: white;
-      font-family: dcd;
-      transform: rotate(-90deg);
-
-      &::before {
-        content: attr(data-text);
+      .hero {
         position: absolute;
-        top: 14px;
-        left: 15px;
-        color: rgb(0 0 0 / 39%);
-        text-shadow: none;
-        filter: blur(2px);
-        z-index: -1;
+        border-radius: 2.5dvh;
+        box-shadow: -20px 19px 20px 0px #000000;
+
+        &:nth-child(1) {
+          z-index: 5;
+          transform: rotate(-8deg);
+        }
+        &:nth-child(2) {
+          z-index: 4;
+        }
+        &:nth-child(3) {
+          z-index: 3;
+        }
       }
     }
 
-    .hero {
-      position: absolute;
-      bottom: 0;
-    }
-
     .contactIcons {
-
-
       display: flex;
       position: absolute;
       flex-direction: column;
       justify-content: space-between;
       overflow: hidden;
+      z-index: 6;
 
       .a {
         animation: bop-in .8s ease-in forwards;
@@ -151,8 +176,8 @@
         p {
           font-size: 1.6dvh;
           width: 68%;
-          color: #8f8e8e;;
-          border-bottom: 1px solid #8f8e8e;
+          color: #a39237;
+          border-bottom: 1px solid #a39237;
           text-align: end;
         }
       }
@@ -165,13 +190,14 @@
     gap: 2dvh;
     flex-direction: column;
     justify-content: center;
-    z-index: 2;
 
     h2 {
       pointer-events: none;
+      color: #a39237;
       font-family: dcd;
       font-size: 1.7dvh;
       height: 4dvh;
+      z-index: 10;
     }
 
     .projectList {
@@ -182,26 +208,28 @@
     }
   
     .project {
-      background: white;
       display: flex;
       gap: 15px;
       overflow: hidden;
       position: relative;
       transition: .3s;
+      z-index: 10;
   
       img {
         position: absolute;
         right: 0;
         width: 100%;
-        top: 15%;
+        top: 8.5dvh;
       }
 
       .textBOX {
         display: flex;
         width: 100%;
         justify-content: space-between;
+        gap: 10dvw;
+        background: linear-gradient(45deg, black, #414040);
         align-items: center;
-        height: 5dvh;
+        height: 8.5dvh;
         padding: 0 1.5dvh;
       }
   
@@ -229,10 +257,11 @@
       h3 {
         font-family: dcd;
         font-size: 1.3dvh;
+        color: #a39237;
       }
   
       p {
-        font-size: 2dvh;
+        font-size: 1.6dvh;
       }
     }
 
@@ -253,25 +282,13 @@
         top: -42%;
         height: 100dvh;
         z-index: -1;
-        backdrop-filter: blur(5px);
+        backdrop-filter: blur(10px);
       }
 
       .cancelBtn {
-        width: 6dvh;
-        position: absolute;
-        top: -25%;
-        left: -10%;
-        cursor: pointer;
-        background: #0000003d;
-        padding: 1.5dvh;
-        border-radius: 50%;
-        transition: .3s;
-        
-        &:hover {
-          box-shadow: inset 0px 3px 9px #000000ad;
-          background: #41574ba1;
-          transform: scale(.97);
-        }
+        width: 100%;
+        height: 12%;
+        top: -17%;
       }
 
       input, textarea {
@@ -279,8 +296,14 @@
         padding: 1dvh 2dvh;
         transition: .3s;
         box-shadow: 3px 5px 5px 0px rgb(33 33 33 / 53%);
-
+        border: 1px solid #a39237;
+        background: linear-gradient(45deg, black, black, transparent);
+        border-right: none;
+        z-index: 2;
+        border-top: none;
+        
         &:focus {
+          border: none;
           transform: scale(0.98);
           box-shadow: none;
         }
@@ -291,43 +314,122 @@
       }
 
       .button {
-        display: flex;
         height: 12dvh;
-        background: black;
-        width: 100%;
-        color: white;
-        align-items: center;
-        justify-content: center;
-        transition: .3s;
-        
-        &:hover {
-          background: #4a6254;
-          transform: scale(0.98);
-        }
+        width: 100%;    
+      }
+    }
+  }
+
+  .workDetails {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100dvh;
+    transition: 0.3s;
+    width: 58dvw;
+    gap: 4dvh;
+    left: -58dvw;
+    top: 0;
+
+    .cancelBtn {
+      top: -2dvh;
+      height: 15dvh;
+      position: absolute;
+      width: 5.5dvh;
+      left: 5dvh;
+      z-index: 6;
+    }
+
+    div, p {
+      position: relative;
+      z-index: 6;
+    }
+
+    .head {
+      display: flex;
+      height: 15%;
+      align-items: center;
+      gap: 2dvw;
+      
+      h1, h3 {
+        font-family: dcd;
+        font-size: 3.5dvh;
+      }
+
+      p {
+        font-size: 2dvh;
+        bottom: -8%;
+      }
+    }
+
+    .description {
+      font-size: 2.5dvh;
+    }
+
+    .views {
+      display: flex;
+      height: 25dvh;
+      gap: 5dvh;
+
+      .screenshot {
+        border-radius: .7dvh;
+        height: 100%;
+      }
+    }
+
+    .techStack {
+      display: flex;
+      gap: 3dvh;
+      height: 5dvh;
+      align-items: center;
+
+      img {
+        width: 3dvw;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100dvw;
+      height: 100dvh;
+      left: 0;
+      z-index: 6;
+      top: 0;
+      backdrop-filter: blur(10px);
+    }
+
+    .projectLinks {
+      width: 70%;
+      display: flex;
+      gap: 6dvh;
+
+      .button {
+        width: 50%;
+        height: 5dvh;
       }
     }
   }
 }
 
-.active {
-  height: 50dvh;
-  width: 100%;
-  box-shadow: -11px 8px 8px 0px rgb(0 0 0 / 15%);
-
-  img, h3, p {
-    transition: .3s;
-    opacity: 1;
-  }
-}
-
 .inactive {
-  height: 5dvh;
+  height: 6dvh;
   width: 90%;
-  box-shadow: 3px 5px 5px 0px rgb(79 79 79 / 39%);
 
   img, h3, p {
     transition: .3s;
     opacity: 0;
+  }
+}
+
+.active {
+  width: 100%;
+
+  img, h3, p {
+    transition: .3s;
+    opacity: 1;
   }
 }
 
@@ -342,7 +444,7 @@
 }
 
 .visible {
-  z-index: 2;
+  z-index: 12;
   opacity: 1;
   
   &::after {
@@ -360,6 +462,7 @@
     height: auto;
 
     .about {
+      flex-direction: row;
       width: 100%;
       top: 0;
       height: auto;
@@ -401,10 +504,6 @@
       bottom: -8dvh;
       width: 84dvw;
       height: 25dvh;
-
-      &::before {
-        content: none;
-      }
   
       h1 {
         font-size: 3.5dvh;
@@ -413,7 +512,7 @@
       }
         
       .hero {
-        height: 40dvh;
+        height: 55dvh;
       }
         
       .contactIcons {
@@ -438,6 +537,10 @@
       height: 115dvh;
     }
   }
+
+  .active {
+    height: 50dvh;
+  }
 }
 
 @media (max-width: 500px) { //mobile Only
@@ -449,11 +552,31 @@
     height: auto;
 
     .about {
-      height: 32dvh;
-      
+      flex-direction: column;
+
+      img {
+        display: none;
+      }
+
+      h1 {
+        transform: rotate(0);
+        left: 0;
+        font-size: 1.5dvh;
+        position: relative;
+        margin-bottom: 4dvh;
+        top: 0;
+
+        &::before {
+          width: 15dvh;
+          left: 1.5dvh;
+          top: 2.6dvh;
+        }
+      }
+
       div {
+        width: 100%;
         flex-direction: column;
-        gap: 3dvh;
+        gap: 2dvh;
       }
 
       .text {
@@ -477,14 +600,31 @@
     }
 
     section {
-      bottom: -15dvh;
+      bottom: -4dvh;
       width: 100%;
-      height: 22dvh;
+      height: 40dvh;
   
       h1 {
         font-size: 3dvh;
         left: -10dvh;
         top: 6dvh;
+      }
+
+      .hero {
+        height: 40dvh;
+
+        &:nth-child(1) {
+          width: 50dvw;
+          left: 5%;
+        }
+        &:nth-child(2) {
+          transform: rotate(10deg) scale(0.9) translate(106%, -1%);
+          width: 42dvw;
+        }
+        &:nth-child(3) {
+          width: 40dvw;
+          transform: rotate(30deg) scale(0.8) translate(191%, -16%);
+        }
       }
         
       .contactIcons {
@@ -500,15 +640,63 @@
     }
 
     .recentWork {
-      bottom: -22dvh;
+      bottom: -12dvh;
       width: auto;
-      height: 120dvh;
+      height: 115dvh;
       justify-content: flex-start;
 
-      .project p {
-        font-size: 1.6dvh;
+      h2 {
+        z-index: 4;
+      }
+
+      .project {
+        z-index: 4;
+
+        p {
+          font-size: 1.6dvh;
+        }
+      }
+
+      .form {
+        top: 25dvh;
+        position: fixed;
+        width: 90%;
+        height: 60dvh;
+  
+        &::after {
+          position: fixed;
+          top: 0;          
+        }
+  
+        .cancelBtn {
+          height: 10%;
+        }
+
+        .button {
+          height: 10dvh;
+        }
       }
     }
+
+    .undefined {
+      z-index: 12;
+    }
+
+    .workDetails {
+      width: 100dvw;
+      left: 0;
+      position: fixed;
+
+      
+
+      &::before {
+        position: fixed;
+      }
+    }
+  }
+
+  .active {
+    height: 30dvh;
   }
 }
 
@@ -522,22 +710,35 @@
 
     .about {
       position: absolute;
+      flex-direction: row;
       top: 5dvh;
-      left: 5dvh;
-      width: 50dvw;
-      height: 12dvh;
+      left: 3dvh;
+      width: 55dvw;
+      height: 25dvh;
+
+      h1 {
+        font-size: 6.5dvh;
+        left: -22dvh;
+        top: 56dvh;
+
+        &::before {
+          width: 77dvh;
+          left: 6.5dvh;
+          top: 10dvh;
+        }
+      }
   
       img {
-        height: 30%;
+        height: 16%;
       }
       
       div {
-        width: 75%;
-        gap: 1.5dvh;
+        width: 90%;
+        gap: 1dvh;
       }
       
       .text {
-        gap: 2dvh;
+        gap: 1.5dvh;
 
         &:nth-child(1)::before {
           height: 82dvh;
@@ -558,22 +759,22 @@
     }
 
     section {
-      width: 52dvw;
-      height: 46dvh;
-      bottom: 8dvh;
-
-      &::before {
-        content: "";
-      }
-
-      h1 {
-        font-size: 6.5dvh;
-        left: -20dvh;
-        top: 13dvh;
-      }
+      width: 50dvw;
+      height: 70dvh;
 
       .hero {
-        height: 68dvh;
+        width: 32dvh;
+        height: 55dvh;
+
+        &:nth-child(1) {
+          left: 10%;
+        }
+        &:nth-child(2) {
+          transform: rotate(10deg) scale(.9) translate(101%, -1%);
+        }
+        &:nth-child(3) {
+          transform: rotate(28deg) scale(0.8) translate(172%, -17%);
+        }
       }
 
       .contactIcons {
@@ -593,9 +794,13 @@
     }
 
     .recentWork {
-      width: 43dvw;
+      width: 41dvw;
       height: 100%;
 
     }
+  }
+
+  .active {
+    height: 50dvh;
   }
 }
