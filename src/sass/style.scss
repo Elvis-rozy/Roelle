@@ -13,6 +13,10 @@
 @import "animations";
 
 @font-face {
+  font-family: Esp;
+  src: url("../font/Esp.otf");
+}
+@font-face {
   font-family: techFont;
   src: url("../font/Archivo.ttf");
 }
@@ -131,11 +135,11 @@
 
     .contactIcons {
       display: flex;
-      position: absolute;
+      position: fixed;
       flex-direction: column;
       justify-content: space-between;
       overflow: hidden;
-      z-index: 6;
+      z-index: 11;
 
       .a {
         animation: bop-in .8s ease-in forwards;
@@ -352,8 +356,14 @@
       height: 15%;
       align-items: center;
       gap: 2dvw;
-      
-      h1, h3 {
+
+      h1 {
+        font-family: Esp;
+        font-size: 3.5dvh;
+        font-weight: 100;
+      }
+
+      h3 {
         font-family: dcd;
         font-size: 3.5dvh;
       }
@@ -399,6 +409,7 @@
       z-index: 6;
       top: 0;
       backdrop-filter: blur(10px);
+      filter: brightness(.6);
     }
 
     .projectLinks {
@@ -459,6 +470,7 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+    padding: 3dvh 2dvh;
     height: auto;
 
     .about {
@@ -471,6 +483,10 @@
 
       img {
         height: 3dvh;
+      }
+
+      h1 {
+        display: none;
       }
       
       div {
@@ -502,7 +518,7 @@
 
     section {
       bottom: -8dvh;
-      width: 84dvw;
+      width: 100%;
       height: 25dvh;
   
       h1 {
@@ -510,14 +526,29 @@
         left: -11dvh;
         top: 6dvh;
       }
+      
+      .heroContainer {
+        position: relative;
+
+        .hero:nth-child(1) {
+          left: 5%;
+          bottom: -5%;
+        }
+        .hero:nth-child(2) {
+          transform: rotate(10deg) scale(0.9) translate(43%, -28%);
+        }
+        .hero:nth-child(3) {
+          transform: rotate(30deg) scale(0.8) translate(120%, -48%);
+        }
+      }
         
       .hero {
-        height: 55dvh;
+        height: 36dvh;
       }
         
       .contactIcons {
-        height: 15dvh;
-        bottom: 3dvh;
+        height: 18dvh;
+        bottom: 33dvh;
         right: 3dvh;
         width: 10dvh;
 
@@ -525,7 +556,7 @@
           right: -7dvh;
 
           img {
-            width: 3dvh;
+            height: 3dvh;
           }
         }
       }
@@ -535,7 +566,91 @@
       bottom: -5dvh;
       width: 90dvw;
       height: 115dvh;
+
+      .form {
+        top: 25dvh;
+        position: fixed;
+        width: 90%;
+        height: 60dvh;
+  
+        &::after {
+          position: fixed;
+          top: 0;          
+        }
+  
+        .cancelBtn {
+          height: 10%;
+        }
+
+        .button {
+          height: 10dvh;
+        }
+      }
     }
+
+    .workDetails {
+      width: 100dvw;
+      left: 0;
+      position: fixed;
+
+      .cancelBtn {
+        padding: 1dvh;
+        width: 4dvh;
+        left: 3dvh;
+      }
+      
+      .head {
+        height: 10%;
+
+        h1 {
+          font-family: Esp;
+          font-size: 5.5dvh;
+        }
+      
+        h3 {
+          font-family: dcd;
+          font-size: 1.6dvh;
+          bottom: -8%;
+          position: relative;
+        }
+        p {
+          font-size: 1.5dvh;
+          bottom: -10%;
+        }
+      }
+
+      .description {
+        font-size: 1.8dvh;
+      }
+      
+      .views {
+        height: 22dvh;
+        gap: 1dvh;
+
+        .screenshot:nth-child(2) {
+          height: 80%;
+          bottom: -20%;
+          position: relative;
+        }
+      }
+    
+      .techStack img {
+        width: 10dvw;
+      }
+
+      .projectLinks {
+        width: 90%;
+        gap: 2dvh;
+      }
+
+      &::before {
+        position: fixed;
+      }
+    }
+  }
+
+  .undefined {
+    z-index: 12;
   }
 
   .active {
@@ -548,7 +663,6 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    padding: 3dvh 2dvh;
     height: auto;
 
     .about {
@@ -559,6 +673,7 @@
       }
 
       h1 {
+        display: flex;
         transform: rotate(0);
         left: 0;
         font-size: 1.5dvh;
@@ -601,7 +716,6 @@
 
     section {
       bottom: -4dvh;
-      width: 100%;
       height: 40dvh;
   
       h1 {
@@ -610,26 +724,28 @@
         top: 6dvh;
       }
 
-      .hero {
-        height: 40dvh;
+      .heroContainer {
 
-        &:nth-child(1) {
-          width: 50dvw;
-          left: 5%;
-        }
-        &:nth-child(2) {
-          transform: rotate(10deg) scale(0.9) translate(106%, -1%);
-          width: 42dvw;
-        }
-        &:nth-child(3) {
-          width: 40dvw;
-          transform: rotate(30deg) scale(0.8) translate(191%, -16%);
+        .hero {
+          height: 40dvh;
+  
+          &:nth-child(1) {
+            width: 50dvw;
+            left: 5%;
+          }
+          &:nth-child(2) {
+            transform: rotate(10deg) scale(0.9) translate(106%, -1%);
+            width: 42dvw;
+          }
+          &:nth-child(3) {
+            width: 40dvw;
+            transform: rotate(30deg) scale(0.8) translate(191%, -16%);
+          }
         }
       }
-        
+
       .contactIcons {
-        height: 15dvh;
-        bottom: 2dvh;
+        bottom: 5dvh;
         right: 2dvh;
         width: 8dvh;
 
@@ -678,19 +794,9 @@
       }
     }
 
-    .undefined {
-      z-index: 12;
-    }
-
     .workDetails {
-      width: 100dvw;
-      left: 0;
-      position: fixed;
-
-      
-
-      &::before {
-        position: fixed;
+      .views {
+        height: 15dvh;
       }
     }
   }
@@ -780,14 +886,14 @@
       .contactIcons {
         height: 25dvh;
         bottom: 5dvh;
-        right: 5dvh;
+        right: 45dvw;
         width: 15dvh;
 
         a, span {
           right: -10dvh;
 
           img {
-            width: 4.5dvh;
+            height: 4dvh;
           }
         }
       }
@@ -796,7 +902,6 @@
     .recentWork {
       width: 41dvw;
       height: 100%;
-
     }
   }
 
