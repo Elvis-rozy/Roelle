@@ -2,3 +2,21 @@
   from {bottom: -100%;}
   to {bottom: 0;}
 }
+@keyframes cardUnfold1 {
+  0% {
+    opacity: 0;
+    transform: rotate(0deg) translate(100px, 30px);
+  }
+  10% {
+    opacity: 1;
+    transform: rotate(0deg) translate(100px, 30px);
+  }
+  90% {
+    opacity: 1;
+    transform: rotate(0deg) translate(100px, 30px);
+  }
+  100% {
+    transform: rotate(-8deg);
+    box-shadow: -20px 19px 20px 0px #000000;
+  }
+}

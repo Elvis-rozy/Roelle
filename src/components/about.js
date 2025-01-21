@@ -1,9 +1,12 @@
+import TypingAnimation from './global/typing.js';
 import { info } from './objects.js';
 
+
 const About =()=>{
+
   return (
     <aside className="about">
-      <img src="../media/icons/gmail.png" alt=""/>
+      <img src="../media/icons/logo.png" alt=""/>
       <h1>roelle</h1>
       <div>
         {info.map((deets)=>{
@@ -12,11 +15,12 @@ const About =()=>{
               <h2>{deets.h2}</h2>
               <span>
                 <h4>{deets.h4}</h4>
-                <p>{deets.p}</p>
+                <TypingAnimation p={deets.p}/>
               </span>
             </div>
           )
         })}
+
       </div>
     </aside>
   )

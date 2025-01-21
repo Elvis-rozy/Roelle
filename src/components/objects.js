@@ -4,14 +4,14 @@ const info = [
   {
     id: 0,
     h2: "Hi",
-    h4: "I'm Elvis",
-    p: "A passionate frontend developer with 2 years of experience and love for crafting responsive, accessible, and visually stunning web applications."
+    h4: "I'm Elvis Oguoma",
+    p: "A Frontend Engineer who's passionate about building fast, responsive, and accessible websites and webapps. But code isn't the only thing i love - I'm also a fan of drawing, art and music. I believe that great design is a combination of art and science, and I'm excited to share my creations with you."
   },
   {
     id: 1,
     h2: "My",
     h4: "Expertise",
-    p: "I am proficient in HTML5, CSS3(Sass), JavaScript(ES6+), React, and React Router. Experienced with version control systems and collaborative workflows(Git and Github), and skilled in creating mobile-friendly, responsive designs that adopt the best practices for inclusive web experiencs."
+    p: "I am proficient in HTML5, CSS3(Sass), JavaScript(ES6+), React, and React Router, with 2 years of experience working on team and personal projects using version control systems and collaborative workflows(Git and Github), I've created a few responsive websites and webapps that adopt the best practices for inclusive web experience."
   }
 ]
 
@@ -62,5 +62,4 @@ const projectDetails = [
   name : "Github"
   }
 ]
-
 export {heroImg, info, contactIcons, projectDetails};

@@ -6,7 +6,7 @@
   box-sizing: border-box;
   list-style: none;
   scroll-behavior: smooth;
-  font-family:  "techFont", sans-serif;
+  font-family: "BankGothic Lt BT", sans-serif;
   color: #9f9f9e;
 }
 
@@ -15,10 +15,6 @@
 @font-face {
   font-family: Esp;
   src: url("../font/Esp.otf");
-}
-@font-face {
-  font-family: techFont;
-  src: url("../font/Archivo.ttf");
 }
 @font-face {
   font-family: dcd;
@@ -31,6 +27,7 @@
   color: white;
   align-items: center;
   justify-content: center;
+  font-size: 2dvh;
   transition: .3s;
   
   &:hover {
@@ -265,7 +262,7 @@
       }
   
       p {
-        font-size: 1.6dvh;
+        font-size: 1.8dvh;
       }
     }
 
@@ -303,6 +300,7 @@
         border: 1px solid #a39237;
         background: linear-gradient(45deg, black, black, transparent);
         border-right: none;
+        font-size: 2dvh;
         z-index: 2;
         border-top: none;
         
@@ -620,7 +618,7 @@
       }
 
       .description {
-        font-size: 1.8dvh;
+        font-size: 2dvh;
       }
       
       .views {

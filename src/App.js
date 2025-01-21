@@ -13,7 +13,7 @@ function App() {
     <main className="home">
       <About/>
       <section>
-        <div className="heroContainer">{heroImg.map((hero)=>(<img key={hero} className="hero" src={hero} alt=""/>))}</div>
+        <div className="heroContainer">{heroImg.map((hero)=>(<img key={hero} className="hero" src={hero} alt="hero"/>))}</div>
         <Contact setStat={setContactStat}/>
       </section>
       <Work workStat={workStat} setWorkStat={setWorkStat} stat={contactStat} setStat={setContactStat}/>
