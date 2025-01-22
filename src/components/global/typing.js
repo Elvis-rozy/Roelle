@@ -11,7 +11,7 @@ function TypingAnimation({p}) {
         setText((prevText) => prevText + p[index]);
         setIndex((prevIndex) => prevIndex + 1);
       } else { clearInterval(intervalId); }
-    }, 100); // adjust the speed of the typing animation
+    }, 80); // adjust the speed of the typing animation
 
     return () => {
       clearInterval(intervalId);

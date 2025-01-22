@@ -31,7 +31,7 @@ const Work =({stat, setStat, workStat, setWorkStat})=>{
       <main className="projectList">
         {projects.map((project)=>{
           return (
-            <PiCard key={project.id} title={project.name} paragraph={project.desc} claz={`project ${activeItemId === project? 'active' : ''}`} 
+            <PiCard id={project.num} key={project.id} title={project.name} paragraph={project.desc} claz={`project ${activeItemId === project? 'active' : ''}`} 
             hover={()=> handleMouseOver(project)} a={bi} imgsrc={project.previewImg} imgalt="profile image" headText={project.name} click={()=>{
               obj = project;
               setWorkStat();

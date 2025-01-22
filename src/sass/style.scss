@@ -111,6 +111,7 @@
       width: 100%;
       height: 100%;
       display: flex;
+      align-items: center;
 
       .hero {
         position: absolute;
@@ -144,16 +145,16 @@
         bottom: -100%;
 
         &:nth-child(1) {
-          animation-delay: 2.6s;
+          animation-delay: 6.6s;
         }
         &:nth-child(2) {
-          animation-delay: 2.4s;
+          animation-delay: 6.4s;
         }
         &:nth-child(3) {
-          animation-delay: 2.2s;
+          animation-delay: 6.2s;
         }
         &:nth-child(4) {
-          animation-delay: 2s;
+          animation-delay: 6s;
         }
       }
 
@@ -215,6 +216,37 @@
       position: relative;
       transition: .3s;
       z-index: 10;
+      bottom: -15%; opacity: 0; filter: blur(50px); transform: scale(0);
+      animation: transition-in .7s ease-out forwards;
+
+      &:nth-child(1) {
+        animation-delay: 2.3s;
+      }
+      &:nth-child(2) {
+        animation-delay: 2.6s;
+      }
+      &:nth-child(3) {
+        animation-delay: 2.9s;
+      }
+      &:nth-child(4) {
+        animation-delay: 3.2s;
+      }
+      &:nth-child(5) {
+        animation-delay: 3.5s;
+      }
+      &:nth-child(6) {
+        animation-delay: 3.8s;
+      }
+      &:nth-child(7) {
+        animation-delay: 4.1s;
+      }
+      &:nth-child(8) {
+        animation-delay: 4.5s;
+      }
+      &:nth-child(9) {
+        animation-delay: 4.8s;
+      }
+
   
       img {
         position: absolute;
@@ -349,6 +381,14 @@
       z-index: 6;
     }
 
+    .head, .description, .views {
+      transition: .3s;
+    }
+
+    .head, .a, .b, .c, .d, .e, .f, .g, .h, .i {
+      bottom: -15%; opacity: 0; filter: blur(50px);
+    }
+
     .head {
       display: flex;
       height: 15%;
@@ -420,6 +460,40 @@
         height: 5dvh;
       }
     }
+  }
+}
+
+.undefined {
+
+  .head, .a, .b, .c, .d, .e, .f, .g, .h, .i {
+    animation: transition-in .7s ease-out forwards;
+  }
+  .a {
+    animation-delay: .3s;
+  }
+  .b {
+    animation-delay: .6s;
+  }
+  .c {
+    animation-delay: .9s;
+  }
+  .d {
+    animation-delay: 1.2s;
+  }
+  .e {
+    animation-delay: 1.5s;
+  }
+  .f {
+    animation-delay: 1.8s;
+  }
+  .g {
+    animation-delay: 2.1s;
+  }
+  .h {
+    animation-delay: 2.4s;
+  }
+  .i {
+    animation-delay: 2.7s;
   }
 }
 
