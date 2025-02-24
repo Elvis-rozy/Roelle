@@ -5,13 +5,13 @@ const info = [
     id: 0,
     h2: "Hi",
     h4: "I'm Elvis Oguoma",
-    p: "A Frontend Engineer who's passionate about building fast, responsive, and accessible websites and webapps. But code isn't the only thing i love - I'm also a fan of drawing, art and music. I believe that great design is a combination of art and science, and I'm excited to share my creations with you."
+    p: "A Frontend Engineer who's passionate about building fast, responsive, and accessible websites. I believe that great design is a combination of art and science, and I'm often caught drawing or listening to music in my spare time."
   },
   {
     id: 1,
     h2: "My",
     h4: "Expertise",
-    p: "I am proficient in HTML5, CSS3(Sass), JavaScript(ES6+), React, and React Router, with 2 years of experience working on team and personal projects using version control systems and collaborative workflows(Git and Github), I've created a few responsive websites and webapps that adopt the best practices for inclusive web experience."
+    p: "I am proficient in HTML5, CSS3(Sass), JavaScript(ES6+), React, and React Router, Framer motion and recently Spline. With 2 years of experience working on team and personal projects using version control systems and collaborative workflows(Git and Github), I've created a few responsive websites and webapps that adopt the best practices for inclusive web experience."
   }
 ]
 

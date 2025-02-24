@@ -377,7 +377,7 @@
 }
 .home .workDetails .head {
   display: flex;
-  height: 15%;
+  height: 10%;
   align-items: center;
   gap: 2dvw;
 }
@@ -396,6 +396,8 @@
 }
 .home .workDetails .description {
   font-size: 2.5dvh;
+  width: 85%;
+  text-align: center;
 }
 .home .workDetails .views {
   display: flex;
@@ -463,9 +465,6 @@
 }
 .undefined .h {
   animation-delay: 2.4s;
-}
-.undefined .i {
-  animation-delay: 2.7s;
 }
 
 .inactive {
@@ -612,9 +611,6 @@
     padding: 1dvh;
     width: 4dvh;
     left: 3dvh;
-  }
-  .home .workDetails .head {
-    height: 10%;
   }
   .home .workDetails .head h1 {
     font-family: Esp;
