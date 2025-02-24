@@ -1,6 +1,4 @@
-import TypingAnimation from './global/typing.js';
 import { info } from './objects.js';
-
 
 const About =()=>{
 
@@ -15,7 +13,7 @@ const About =()=>{
               <h2>{deets.h2}</h2>
               <span>
                 <h4>{deets.h4}</h4>
-                <TypingAnimation p={deets.p}/>
+                <p>{deets.p}</p>
               </span>
             </div>
           )
