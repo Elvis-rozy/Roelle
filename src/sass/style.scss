@@ -40,7 +40,6 @@
 .cancelBtn {
   position: absolute;
   cursor: pointer;
-  background: #000000;
   padding: 1.5dvh;
   transition: .3s;
   
@@ -385,7 +384,7 @@
       transition: .3s;
     }
 
-    .head, .a, .b, .c, .d, .e, .f, .g, .h, .i {
+    .head, .a, .b, .c, .d, .e, .f, .g, .h, .i, .j {
       bottom: -15%; opacity: 0; filter: blur(50px);
     }
 
@@ -421,6 +420,7 @@
     .views {
       display: flex;
       height: 25dvh;
+      align-items: center;
       gap: 5dvh;
 
       .screenshot {
@@ -467,7 +467,7 @@
 
 .undefined {
 
-  .head, .a, .b, .c, .d, .e, .f, .g, .h, .i {
+  .head, .a, .b, .c, .d, .e, .f, .g, .h, .i, .j {
     animation: transition-in .7s ease-out forwards;
   }
   .a {
@@ -493,6 +493,12 @@
   }
   .h {
     animation-delay: 2.4s;
+  }
+  .i {
+    animation-delay: 2.7s;
+  }
+  .j {
+    animation-delay: 3s;
   }
 }
 

@@ -1,5 +1,3 @@
-//import { projectDetails } from './objects.js';
-
 const WorkDetails =({project, stat, setStat})=>{
 
   return (
@@ -16,13 +14,15 @@ const WorkDetails =({project, stat, setStat})=>{
         <img className="screenshot c" src={project.mobileImg} alt={project.name}/>
       </div>
       <div className="techStack">
-        <img className="d" src="./media/icons/figma.png" alt=""/>
-        <img className="e" src="./media/icons/figma.png" alt=""/>
-        <img className="f" src="./media/icons/figma.png" alt=""/>
+        <img className="d" src={project.stackImg1} alt=""/>
+        <img className="e" src={project.stackImg2} alt=""/>
+        <img className="f" src={project.stackImg3} alt=""/>
+        <img className="g" src={project.stackImg4} alt=""/>
+        <img className="h" src={project.stackImg5} alt=""/>
       </div>
       <div className="projectLinks">
-        <a className="button g" href={project.codeLink}>View Github Code</a>
-        <a className="button h" href={project.webLink}>View Live Website</a>
+        <a className="button i" href={project.codeLink}>View Github Code</a>
+        <a className="button j" href={project.webLink}>View Live Website</a>
       </div>
     </div>
   )
