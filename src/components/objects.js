@@ -11,7 +11,7 @@ const info = [
     id: 1,
     h2: "My",
     h4: "Expertise",
-    p: "I am proficient in HTML5, CSS3(Sass), JavaScript(ES6+), React, and React Router, Framer motion and recently Spline. With 2 years of experience working on team and personal projects using version control systems and collaborative workflows(Git and Github), I've created a few responsive websites and webapps that adopt the best practices for inclusive web experience."
+    p: "I am proficient in HTML5, CSS3(Sass), JavaScript(ES6+), React, and React Router, Framer motion and recently Spline. With almost 5 years of experience working on team and personal projects using version control systems and collaborative workflows(Git and Github), I've created a few responsive websites and webapps that adopt the best practices for inclusive web experience."
   }
 ]
 
